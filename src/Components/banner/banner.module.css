@@ -1,0 +1,20 @@
+/* Banner.module.css */
+
+/* Main container for the banner */
+.bannerContainer {
+    margin: 20px auto;
+    max-width: 1000px; /* Restrict the banner width for larger screens */
+    width: 100%; /* Make the banner responsive */
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  /* Banner image styling */
+  .bannerImage {
+    width: 100%; /* Ensure the banner image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Match the container's corners */
+    object-fit: cover; /* Ensure the image fits nicely inside the container */
+  }
+  

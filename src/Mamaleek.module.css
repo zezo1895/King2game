@@ -1,0 +1,121 @@
+/* General container */
+.appContainer {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+}
+
+.navBar .left h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.navBar .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fundsContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fundsValue {
+  font-weight: bold;
+  color: white;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+/* Banner Section */
+.bannerContainer {
+  margin: 20px auto;
+  max-width: 1000px; /* Optional maximum width for larger screens */
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Categories Section */
+.categories {
+  display: grid;
+  gap: 10px; /* Space between items */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 1000px; /* Optional max width for larger screens */
+  padding: 0 10px;
+}
+
+.categoryCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 0; /* Remove padding */
+  width: 100%; /* Ensure cards take full width within their container */
+  max-width: 180px; /* Increase the maximum width of the cards */
+  height: auto; /* Let the height adjust dynamically */
+  background-color: transparent; /* Remove background color */
+  border: none; /* Remove border */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.categoryCard:hover {
+  transform: translateY(-5px); /* Hover effect */
+  box-shadow: none; /* No box shadow */
+}
+
+.categoryImage {
+  width: 100%;
+  height: auto;
+  max-height: 180px; /* Increased max height by 25% to make images bigger */
+  object-fit: cover; /* Ensure the image fits within the card without distortion */
+  border-radius: 0; /* No border-radius */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .categories {
+    grid-template-columns: 1fr 1fr; /* Two items per row for smaller screens */
+    gap: 8px; /* Slightly smaller gap for compact layout */
+  }
+}
+
+@media (max-width: 480px) {
+  .categories {
+    grid-template-columns: 1fr 1fr; /* Two items per row on very small screens */
+    gap: 5px; /* Reduce gap further for tight spacing */
+  }
+
+  .categoryCard {
+    max-width: 160px; /* Slightly smaller cards for mobile */
+  }
+
+  .categoryImage {
+    max-height: 170px; /* Increased max height for mobile devices */
+  }
+}
